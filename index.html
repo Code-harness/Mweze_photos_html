@@ -1,0 +1,429 @@
+<!-- index.html — Modern Photography Website (HTML + CSS + minimal JS) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Studio Lumière — Photography</title>
+    <meta
+      name="description"
+      content="Studio Lumière — professional photography for weddings, portraits, events and commercial work."
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- NAV -->
+    <div class="nav container" role="navigation" aria-label="Main navigation">
+      <div class="brand">
+        <div class="logo">SL</div>
+        <div>
+          <h1>Studio Lumière</h1>
+          <p class="muted">Fine art & commercial photography</p>
+        </div>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#booking" class="muted">Book</a>
+        <a href="#contact" class="muted">Contact</a>
+        <a class="cta" href="#booking">Book Now</a>
+      </div>
+
+      <div class="menu-toggle">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-card">
+          <div class="hero-head">
+            <span class="eyebrow">Studio — Fine Art</span>
+            <h2 id="heroTitle" class="hero-title">
+              We craft images that tell your story
+            </h2>
+            <p class="hero-sub">
+              Weddings • Portraits • Commercial • Events — cinematic photography
+              with timeless editing.
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn">View Portfolio</a>
+            <a href="#booking" class="btn primary">Start Booking</a>
+          </div>
+
+          <div class="mb-8">
+            <p class="small muted">
+              Award-winning studio based in Kigali — available worldwide.
+            </p>
+          </div>
+
+          <div class="grid-2" style="margin-top: 6px">
+            <div class="card-simple">
+              <strong>Signature Package</strong>
+              <p class="small muted" style="margin-top: 6px">
+                Full-day coverage, lead photographer, edited gallery, 20 prints.
+              </p>
+              <div style="margin-top: 10px">
+                <span class="chip">From $1200</span>
+              </div>
+            </div>
+            <div class="card-simple">
+              <strong>Commercial & Brand</strong>
+              <p class="small muted" style="margin-top: 6px">
+                Product photography, lifestyle sets, content for socials & ads.
+              </p>
+              <div style="margin-top: 10px">
+                <span class="chip">Custom quotes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <img
+            src="https://picsum.photos/1200/800?photo=1"
+            alt="Studio sample photo"
+          />
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio" aria-labelledby="portfolioTitle">
+        <div class="section-title">
+          <h2 id="portfolioTitle">Featured Work</h2>
+          <div class="filters" role="tablist" aria-label="Portfolio filters">
+            <button class="chip active" data-filter="*">All</button>
+            <button class="chip" data-filter="weddings">Weddings</button>
+            <button class="chip" data-filter="portraits">Portraits</button>
+            <button class="chip" data-filter="commercial">Commercial</button>
+          </div>
+        </div>
+
+        <div class="masonry" id="masonry">
+          <!-- Each card has a data-category attribute for simple filtering -->
+          <div class="card" data-category="weddings">
+            <img
+              data-src="https://picsum.photos/600/900?img=101"
+              alt="Wedding portrait"
+              loading="lazy"
+            />
+            <div class="meta">Wedding — Rwanda</div>
+          </div>
+
+          <div class="card" data-category="portraits">
+            <img
+              data-src="https://picsum.photos/600/400?img=102"
+              alt="Portrait"
+              loading="lazy"
+            />
+            <div class="meta">Portrait</div>
+          </div>
+
+          <div class="card" data-category="commercial">
+            <img
+              data-src="https://picsum.photos/600/800?img=103"
+              alt="Commercial product"
+              loading="lazy"
+            />
+            <div class="meta">Product</div>
+          </div>
+
+          <div class="card" data-category="weddings">
+            <img
+              data-src="https://picsum.photos/600/700?img=104"
+              alt="Couple"
+              loading="lazy"
+            />
+            <div class="meta">Wedding</div>
+          </div>
+
+          <div class="card" data-category="portraits">
+            <img
+              data-src="https://picsum.photos/600/350?img=105"
+              alt="Studio portrait"
+              loading="lazy"
+            />
+            <div class="meta">Portrait — Studio</div>
+          </div>
+
+          <div class="card" data-category="commercial">
+            <img
+              data-src="https://picsum.photos/600/1000?img=106"
+              alt="Lifestyle ad"
+              loading="lazy"
+            />
+            <div class="meta">Commercial</div>
+          </div>
+
+          <!-- duplicate to show many items -->
+          <div class="card" data-category="weddings">
+            <img
+              data-src="https://picsum.photos/600/800?img=107"
+              alt="Wedding decor"
+              loading="lazy"
+            />
+            <div class="meta">Decor</div>
+          </div>
+
+          <div class="card" data-category="portraits">
+            <img
+              data-src="https://picsum.photos/600/780?img=108"
+              alt="Editorial portrait"
+              loading="lazy"
+            />
+            <div class="meta">Editorial</div>
+          </div>
+
+          <div class="card" data-category="commercial">
+            <img
+              data-src="https://picsum.photos/600/450?img=109"
+              alt="Product shot"
+              loading="lazy"
+            />
+            <div class="meta">E-commerce</div>
+          </div>
+
+          <div class="card" data-category="portraits">
+            <img
+              data-src="https://picsum.photos/600/680?img=110"
+              alt="Candid portrait"
+              loading="lazy"
+            />
+            <div class="meta">Candid</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES & ABOUT -->
+      <section id="services" style="margin-top: 28px">
+        <div class="section-title">
+          <h2>Services</h2>
+          <p class="small muted">Tailored packages & à la carte services</p>
+        </div>
+
+        <div class="grid-2" style="align-items: start">
+          <div class="card-simple">
+            <h3>What we offer</h3>
+            <div class="service-list" style="margin-top: 10px">
+              <div class="service">
+                <div class="icon">W</div>
+                <div>
+                  <strong>Weddings</strong>
+                  <div class="small muted">
+                    Full-day coverage, second shooter, prints & album.
+                  </div>
+                </div>
+              </div>
+
+              <div class="service">
+                <div class="icon">P</div>
+                <div>
+                  <strong>Portraits</strong>
+                  <div class="small muted">
+                    Studio and environmental portraits for individuals & brands.
+                  </div>
+                </div>
+              </div>
+
+              <div class="service">
+                <div class="icon">C</div>
+                <div>
+                  <strong>Commercial</strong>
+                  <div class="small muted">
+                    Product, advertising, and content strategy shoots.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-simple" id="about">
+            <h3>About the studio</h3>
+            <p class="small muted">
+              Studio Lumière is led by a team of storytellers who blend
+              cinematic technique with editorial aesthetics. We focus on natural
+              light, layered compositions and meticulous post-production.
+            </p>
+
+            <div style="margin-top: 14px">
+              <strong>Awards</strong>
+              <div class="small muted" style="margin-top: 6px">
+                Winner — East Africa Photo Awards 2023
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="testimonials" style="margin-top: 28px">
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p class="small muted">What clients say</p>
+        </div>
+
+        <div class="grid-2" style="align-items: start">
+          <div class="card-simple">
+            <p class="quote">
+              "Studio Lumière captured our day perfectly — every emotion, every
+              laugh. Highly recommended."
+            </p>
+            <p class="small muted" style="margin-top: 10px">
+              — Angela K., Bride
+            </p>
+          </div>
+
+          <div class="card-simple">
+            <p class="quote">
+              "We saw a jump in conversions after the commercial shoot. Clean,
+              professional and fast."
+            </p>
+            <p class="small muted" style="margin-top: 10px">
+              — Mark T., Founder
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOKING -->
+      <section id="booking" style="margin-top: 28px">
+        <div class="section-title">
+          <h2>Start a booking</h2>
+          <p class="small muted">
+            Tell us about your project — we'll follow up with availability &
+            quote.
+          </p>
+        </div>
+
+        <div class="card-simple">
+          <form
+            id="bookingForm"
+            onsubmit="return false"
+            aria-label="Booking form"
+          >
+            <div class="form-grid">
+              <div class="row">
+                <label class="small">Full name</label>
+                <input
+                  class="input"
+                  id="name"
+                  required
+                  placeholder="Jane Doe"
+                />
+              </div>
+
+              <div class="row">
+                <label class="small">Email</label>
+                <input
+                  class="input"
+                  id="email"
+                  type="email"
+                  required
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div class="row">
+                <label class="small">Phone</label>
+                <input
+                  class="input"
+                  id="phone"
+                  placeholder="+250 7xx xxx xxx"
+                />
+              </div>
+
+              <div class="row">
+                <label class="small">Date</label>
+                <input class="input" id="date" type="date" required />
+              </div>
+            </div>
+
+            <div style="margin-top: 12px" class="row">
+              <label class="small">Service</label>
+              <select id="service" class="input">
+                <option value="wedding">Wedding — Signature</option>
+                <option value="portrait">Portrait — Studio</option>
+                <option value="commercial">Commercial — Brand</option>
+              </select>
+            </div>
+
+            <div style="margin-top: 12px" class="row">
+              <label class="small">Message</label>
+              <textarea
+                id="message"
+                placeholder="Tell us what you're planning..."
+              ></textarea>
+            </div>
+
+            <div
+              style="
+                margin-top: 12px;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+              "
+            >
+              <button class="btn primary" id="bookBtn">Request Quote</button>
+              <small class="small muted"
+                >We typically reply within 24–48 hours.</small
+              >
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" style="margin-top: 28px">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p class="small muted">Let's talk — email, phone, or WhatsApp</p>
+        </div>
+
+        <div class="card-simple contact-row">
+          <div>
+            <strong>Email</strong>
+            <div class="small muted">hello@studiolumiere.example</div>
+          </div>
+          <div>
+            <strong>Phone / WhatsApp</strong>
+            <div class="small muted">+250 78x xxx xxx</div>
+          </div>
+
+          <div class="socials">
+            <a class="chip" href="#" aria-label="Instagram">Instagram</a>
+            <a class="chip" href="#" aria-label="Behance">Behance</a>
+            <a class="chip" href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+      <div class="inner" role="document">
+        <button class="close-btn" id="lightboxClose" aria-label="Close">
+          ✕
+        </button>
+        <img src="" alt="" id="lightboxImg" />
+      </div>
+    </div>
+
+    <footer
+      style="
+        margin-top: 30px;
+        padding: 18px 0;
+        color: var(--muted);
+        text-align: center;
+      "
+    >
+      © <strong>Studio Lumière</strong> — Crafted with care • Kigali
+    </footer>
+
+<script src="./script.js"></script>
+  </body>
+</html>
